@@ -1,0 +1,331 @@
+<?php
+
+/**
+ * Editable portfolio content.
+ *
+ * This is the file to update when the group is ready to publish real information.
+ * Replace every placeholder below. Nothing in this file is a real person,
+ * qualification, or project result.
+ *
+ * Photos
+ * - Member portraits: assets/images/members/your-file.jpg
+ * - Project images: assets/images/projects/your-file.jpg
+ * Then set the file name in `photo` or `image`. Leave the field empty to keep
+ * the built-in graphic.
+ *
+ * @package Group_Portfolio
+ */
+
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+/**
+ * All front-page content.
+ *
+ * @return array<string, mixed>
+ */
+function gp_content()
+{
+	static $content = null;
+
+	if (null !== $content) {
+		return $content;
+	}
+
+	$content = array(
+		'group_name'       => 'NJAK',
+		'tagline'          => '4th Year Information Technology Students',
+		'meta_description' => 'Portfolio of four 4th-year Information Technology students. Placeholder content ready to be replaced with the group\'s own work.',
+		'email'            => 'njak.team@gmail.com',
+
+		'nav'              => array(
+			array(
+				'label' => 'Home',
+				'hash'  => 'home',
+			),
+			array(
+				'label' => 'About Us',
+				'hash'  => 'about',
+			),
+			array(
+				'label' => 'Our Members',
+				'hash'  => 'team',
+			),
+			array(
+				'label' => 'Skills',
+				'hash'  => 'skills',
+			),
+			array(
+				'label' => 'Projects',
+				'hash'  => 'projects',
+			),
+			array(
+				'label' => 'Contact',
+				'hash'  => 'contact',
+				'cta'   => true,
+			),
+		),
+
+		'hero'             => array(
+			'label'           => '4TH YEAR INFORMATION TECHNOLOGY STUDENTS',
+			'title_lead'      => 'Building Ideas.',
+			'title_accent'    => 'Creating Digital Experiences.',
+			'text'            => 'We are a team of four passionate Information Technology students dedicated to exploring technology, developing innovative solutions, and transforming ideas into meaningful digital experiences.',
+			'primary_label'   => 'Explore Our Portfolio',
+			'primary_hash'    => 'projects',
+			'secondary_label' => 'Meet Our Team',
+			'secondary_hash'  => 'team',
+		),
+
+		'about'            => array(
+			'label' => 'About Us',
+			'title' => 'Four Minds. One Vision.',
+			'text'  => 'We are a collaborative team of four 4th-year IT students who share a passion for technology, creativity, and continuous learning. Through our academic journey, we have developed technical knowledge, practical skills, and a strong interest in creating solutions that address real-world challenges.',
+			'link'  => 'Meet Our Team',
+			'hash'  => 'team',
+		),
+
+		'pillars'          => array(
+			array(
+				'number' => '01',
+				'title'  => 'Collaboration',
+				'text'   => 'Shared work across one group portfolio.',
+			),
+			array(
+				'number' => '02',
+				'title'  => 'Learning',
+				'text'   => 'Knowledge built through study and practice.',
+			),
+			array(
+				'number' => '03',
+				'title'  => 'Craft',
+				'text'   => 'Care for clear, usable digital work.',
+			),
+			array(
+				'number' => '04',
+				'title'  => 'Purpose',
+				'text'   => 'Ideas shaped into experiences people can use.',
+			),
+		),
+
+		'team'             => array(
+			'label' => 'Our Members',
+			'title' => 'Meet Our Team',
+			'text'  => 'The four Information Technology students in this group.',
+		),
+
+		'members'          => array(
+			array(
+				'name'  => 'Nolly S. Sumobay Jr.',
+				'role'  => 'Programmer',
+				'bio'   => 'Responsible for developing, coding, and maintaining the system. Focuses on creating functional features and ensuring the application works smoothly.',
+				'skills' => array('PHP', 'HTML', 'CSS', 'JavaScript'),
+				'photo' => 'nolly.jpg',
+				'tone'  => 'blue',
+				'links' => array(
+					array(
+						'label' => 'GitHub',
+						'icon'  => 'github',
+						'url'   => 'https://github.com/',
+					),
+					array(
+						'label' => 'LinkedIn',
+						'icon'  => 'linkedin',
+						'url'   => 'https://www.linkedin.com/',
+					),
+				),
+			),
+			array(
+				'name'  => 'Japhet Dasig',
+				'role'  => 'Project Manager',
+				'bio'   => 'Leads the team, organizes tasks, and monitors project progress. Ensures that everyone works together to complete the project on time.',
+				'skills' => array('Leadership', 'Planning', 'Teamwork', 'Time Management'),
+				'photo' => 'japhet.jpg',
+				'tone'  => 'violet',
+				'links' => array(
+					array(
+						'label' => 'GitHub',
+						'icon'  => 'github',
+						'url'   => 'https://github.com/',
+					),
+					array(
+						'label' => 'LinkedIn',
+						'icon'  => 'linkedin',
+						'url'   => 'https://www.linkedin.com/',
+					),
+				),
+			),
+			array(
+				'name'  => 'Keshel B. Honayon',
+				'role'  => 'Technical Writer',
+				'bio'   => 'Creates and organizes project documentation, including user guides and technical reports. Ensures that project information is clear and easy to understand.',
+				'skills' => array('Documentation', 'Technical Writing', 'Research', 'Communication'),
+				'photo' => 'keshel.jpg',
+				'tone'  => 'cyan',
+				'links' => array(
+					array(
+						'label' => 'GitHub',
+						'icon'  => 'github',
+						'url'   => 'https://github.com/',
+					),
+					array(
+						'label' => 'LinkedIn',
+						'icon'  => 'linkedin',
+						'url'   => 'https://www.linkedin.com/',
+					),
+				),
+			),
+			array(
+				'name'  => 'Adrian Lester Econar',
+				'role'  => 'System Analyst',
+				'bio'   => 'Analyzes project requirements and identifies solutions to improve the system. Helps ensure that the system meets user needs and project objectives.',
+				'skills' => array('System Analysis', 'Problem Solving', 'Research', 'Requirements Analysis'),
+				'photo' => 'adrian.jpg',
+				'tone'  => 'indigo',
+				'links' => array(
+					array(
+						'label' => 'GitHub',
+						'icon'  => 'github',
+						'url'   => 'https://github.com/',
+					),
+					array(
+						'label' => 'LinkedIn',
+						'icon'  => 'linkedin',
+						'url'   => 'https://www.linkedin.com/',
+					),
+				),
+			),
+		),
+
+		'skills'           => array(
+			'label' => 'Skills',
+			'title' => 'Technical Skills',
+			'text'  => 'The categories below are ready for the group\'s real tools. The items inside each card are placeholders, not claimed qualifications.',
+		),
+
+		'skill_groups'     => array(
+			array(
+				'icon'  => 'code',
+				'title' => 'Programming Languages',
+				'text'  => 'Languages used to write software and scripts.',
+				'items' => array('Java', 'Python', 'JavaScript'),
+			),
+			array(
+				'icon'  => 'layout',
+				'title' => 'Web Development',
+				'text'  => 'Building pages, interfaces, and web applications.',
+				'items' => array('HTML', 'CSS', 'PHP'),
+			),
+			array(
+				'icon'  => 'database',
+				'title' => 'Database Management',
+				'text'  => 'Storing, querying, and organizing data.',
+				'items' => array('SQL', 'MySQL', 'Modeling'),
+			),
+			array(
+				'icon'  => 'network',
+				'title' => 'Networking',
+				'text'  => 'How systems connect and communicate.',
+				'items' => array('TCP/IP', 'LAN', 'Routing'),
+			),
+			array(
+				'icon'  => 'pen',
+				'title' => 'UI/UX Design',
+				'text'  => 'Planning layouts and the way people use a product.',
+				'items' => array('Wireframes', 'Layout', 'Typography'),
+			),
+			array(
+				'icon'  => 'cpu',
+				'title' => 'Hardware and Troubleshooting',
+				'text'  => 'Working with devices and finding the cause of a problem.',
+				'items' => array('Diagnostics', 'Assembly', 'Repair'),
+			),
+			array(
+				'icon'  => 'tool',
+				'title' => 'Software and Tools',
+				'text'  => 'Applications used to design, build, and collaborate.',
+				'items' => array('Git', 'Editor', 'Figma'),
+			),
+		),
+
+		'projects'         => array(
+			'label' => 'Projects',
+			'title' => 'Featured Projects',
+			'text'  => 'Academic and personal projects from the group.',
+		),
+
+		'project_items'    => array(
+			array(
+				'title' => 'ALS Center Management System',
+				'text'  => 'A web-based system designed to manage and organize ALS Center records, learners information, enrollment, and other administrative tasks efficiently.',
+				'tech'  => array('PHP', 'Laravel', 'JavaScript'),
+				'image' => 'als.jpg',
+				'style' => 'interface',
+				'url'   => '',
+				'button' => 'View Project',
+			),
+			array(
+				'title' => 'Electric Billing System',
+				'text'  => 'A system designed to calculate electricity consumption, generate billing statements, and manage customer payment records accurately and efficiently.',
+				'tech'  => array('PHP', 'MySQL', 'JavaScript'),
+				'image' => '',
+				'style' => 'systems',
+				'url'   => '',
+				'button' => 'View Project',
+			),
+
+		),
+
+		'contact'          => array(
+			'label' => 'Contact',
+			'title' => 'Let\'s Connect and Build Something Great.',
+			'text'  => 'Reach the group by email, or send a message with the form. Social links below are placeholders.',
+		),
+
+		'socials'          => array(
+			array(
+				'label' => 'GitHub',
+				'icon'  => 'github',
+				'url'   => 'https://github.com/',
+			),
+			array(
+				'label' => 'LinkedIn',
+				'icon'  => 'linkedin',
+				'url'   => 'https://www.linkedin.com/',
+			),
+		),
+
+		'footer'           => array(
+			'summary' => 'A group portfolio for four 4th-year Information Technology students.',
+			'note'    => 'Designed and Developed by %s | 4th Year Information Technology Students',
+		),
+	);
+
+	/**
+	 * Filters the portfolio content array.
+	 *
+	 * @param array<string, mixed> $content Site content.
+	 */
+	$content = apply_filters('gp_content', $content);
+
+	return $content;
+}
+
+/**
+ * Read one content value.
+ *
+ * @param string $key     Top-level key.
+ * @param mixed  $default Fallback when the key is missing.
+ * @return mixed
+ */
+function gp_content_get($key, $default = null)
+{
+	$content = gp_content();
+
+	if (array_key_exists($key, $content)) {
+		return $content[$key];
+	}
+
+	return $default;
+}
