@@ -14,6 +14,7 @@ require get_template_directory() . '/inc/helpers.php';
 require get_template_directory() . '/inc/icons.php';
 require get_template_directory() . '/inc/artwork.php';
 require get_template_directory() . '/inc/contact.php';
+require get_template_directory() . '/inc/members.php';
 
 /**
  * Theme supports and menus.
@@ -95,11 +96,17 @@ function gp_head() {
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
 	echo '<link rel="icon" href="' . esc_url( get_template_directory_uri() . '/assets/images/favicon.svg' ) . '" type="image/svg+xml">' . "\n";
 
-	if ( is_front_page() ) {
-		$description = gp_content_get( 'meta_description', '' );
-		if ( is_string( $description ) && '' !== $description ) {
-			echo '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
-		}
+	$description = '';
+	$member      = gp_current_member();
+
+	if ( is_array( $member ) && ! empty( $member['bio'] ) ) {
+		$description = (string) $member['bio'];
+	} elseif ( is_front_page() ) {
+		$description = (string) gp_content_get( 'meta_description', '' );
+	}
+
+	if ( '' !== $description ) {
+		echo '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
 	}
 
 	echo "<script>document.documentElement.classList.add('js');</script>\n";
@@ -113,6 +120,14 @@ add_action( 'wp_head', 'gp_head', 1 );
  * @return array<string, string>
  */
 function gp_document_title( $parts ) {
+	$member = gp_current_member();
+
+	if ( is_array( $member ) && ! empty( $member['name'] ) ) {
+		$parts['title'] = (string) $member['name'];
+		$parts['tagline'] = ! empty( $member['role'] ) ? (string) $member['role'] : '';
+		return $parts;
+	}
+
 	if ( is_front_page() ) {
 		$parts['title']   = (string) gp_content_get( 'group_name', get_bloginfo( 'name' ) );
 		$parts['tagline'] = (string) gp_content_get( 'tagline', '' );

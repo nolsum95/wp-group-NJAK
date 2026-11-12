@@ -40,6 +40,9 @@ $gp_members = is_array( $gp_members ) ? $gp_members : array();
 				$gp_skills = isset( $gp_member['skills'] ) && is_array( $gp_member['skills'] ) ? $gp_member['skills'] : array();
 				?>
 				<article class="member-card reveal">
+					<a class="member-card-link" href="<?php echo esc_url( gp_member_url( $gp_member ) ); ?>">
+						<span class="sr-only"><?php echo esc_html( sprintf( __( 'Get to know %s', 'group-portfolio' ), $gp_member['name'] ) ); ?></span>
+					</a>
 					<div class="member-photo tone-<?php echo esc_attr( $gp_tone ); ?><?php echo $gp_photo ? ' has-photo' : ''; ?>">
 						<div class="photo-art" aria-hidden="true">
 							<span class="blob b1"></span>
@@ -47,10 +50,11 @@ $gp_members = is_array( $gp_members ) ? $gp_members : array();
 							<span class="photo-ring"></span>
 						</div>
 						<?php if ( $gp_photo ) : ?>
-							<img src="<?php echo esc_url( $gp_photo ); ?>" alt="<?php echo esc_attr( $gp_member['name'] ); ?>" loading="lazy" decoding="async">
+							<img src="<?php echo esc_url( $gp_photo ); ?>" alt="" loading="lazy" decoding="async">
 						<?php else : ?>
 							<span class="monogram"><?php echo esc_html( gp_initials( $gp_member['name'] ) ); ?></span>
 						<?php endif; ?>
+						<span class="member-bubble" aria-hidden="true"><?php esc_html_e( 'Get to know me!', 'group-portfolio' ); ?></span>
 					</div>
 					<div class="member-body">
 						<h3><?php echo esc_html( $gp_member['name'] ); ?></h3>

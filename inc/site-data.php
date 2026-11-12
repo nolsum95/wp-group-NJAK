@@ -13,6 +13,9 @@
  * Then set the file name in `photo` or `image`. Leave the field empty to keep
  * the built-in graphic.
  *
+ * Member pages
+ * - Each member needs a `slug`. Their portfolio is /member/{slug}/.
+ *
  * @package Group_Portfolio
  */
 
@@ -117,6 +120,7 @@ function gp_content()
 
 		'members'          => array(
 			array(
+				'slug'  => 'nolly',
 				'name'  => 'Nolly S. Sumobay Jr.',
 				'role'  => 'Programmer',
 				'bio'   => 'Responsible for developing, coding, and maintaining the system. Focuses on creating functional features and ensuring the application works smoothly.',
@@ -125,9 +129,9 @@ function gp_content()
 				'tone'  => 'blue',
 				'links' => array(
 					array(
-						'label' => 'GitHub',
-						'icon'  => 'github',
-						'url'   => 'https://github.com/',
+						'label' => 'Facebook',
+						'icon'  => 'facebook',
+						'url'   => 'https://www.facebook.com/muslon.nssj',
 					),
 					array(
 						'label' => 'LinkedIn',
@@ -137,10 +141,11 @@ function gp_content()
 				),
 			),
 			array(
+				'slug'  => 'japhet',
 				'name'  => 'Japhet Dasig',
 				'role'  => 'Project Manager',
 				'bio'   => 'Leads the team, organizes tasks, and monitors project progress. Ensures that everyone works together to complete the project on time.',
-				'skills' => array('Leadership', 'Planning', 'Teamwork', 'Time Management'),
+				'skills' => array( 'Leadership', 'Planning', 'Teamwork', 'Time Management' ),
 				'photo' => 'japhet.jpg',
 				'tone'  => 'violet',
 				'links' => array(
@@ -157,26 +162,93 @@ function gp_content()
 				),
 			),
 			array(
-				'name'  => 'Keshel B. Honayon',
-				'role'  => 'Technical Writer',
-				'bio'   => 'Creates and organizes project documentation, including user guides and technical reports. Ensures that project information is clear and easy to understand.',
-				'skills' => array('Documentation', 'Technical Writing', 'Research', 'Communication'),
-				'photo' => 'keshel.jpg',
-				'tone'  => 'cyan',
-				'links' => array(
+				'slug'    => 'keshel',
+				'name'    => 'Keshel Bongcasan Honayon',
+				'role'    => 'BSIT Student | Technical Writer',
+				'tagline' => 'Learning today, innovating tomorrow.',
+				'bio'     => 'A fourth-year BSIT student at Opol Community College who builds with code and explains technical work in clear, useful writing.',
+				'skills'  => array( 'Technical Writing', 'HTML', 'CSS', 'PHP', 'MySQL' ),
+				'photo'   => 'keshel-portrait.jpg',
+				'tone'    => 'cyan',
+				'about'   => array(
 					array(
-						'label' => 'GitHub',
-						'icon'  => 'github',
-						'url'   => 'https://github.com/',
+						'label' => 'Background',
+						'text'  => 'A fourth-year BSIT student at Opol Community College who likes organizing information and explaining technical ideas in plain language.',
 					),
 					array(
-						'label' => 'LinkedIn',
-						'icon'  => 'linkedin',
-						'url'   => 'https://www.linkedin.com/',
+						'label' => 'Interests',
+						'text'  => 'New technology, programming, writing, music, movies, and time with family and friends.',
+					),
+					array(
+						'label' => 'Values',
+						'text'  => 'Honesty, responsibility, teamwork, and accuracy, with writing that is easy to understand the first time.',
+					),
+					array(
+						'label' => 'Career Goal',
+						'text'  => 'To work in technical writing and software documentation, creating guides and manuals people can actually use.',
+					),
+				),
+				'skill_groups' => array(
+					array(
+						'icon'  => 'code',
+						'title' => 'Programming Languages',
+						'items' => array( 'HTML', 'CSS', 'JavaScript', 'PHP', 'Java (basic)' ),
+					),
+					array(
+						'icon'  => 'layout',
+						'title' => 'Technical Skills',
+						'items' => array( 'Web Development', 'Database Management', 'Networking', 'Troubleshooting', 'System Analysis' ),
+					),
+					array(
+						'icon'  => 'cpu',
+						'title' => 'Tools',
+						'items' => array( 'Visual Studio Code', 'XAMPP', 'MySQL', 'GitHub', 'Microsoft Office' ),
+					),
+					array(
+						'icon'  => 'pen',
+						'title' => 'Technical Writing',
+						'items' => array( 'Documentation', 'User Guides', 'Report Writing', 'Editing' ),
+					),
+					array(
+						'icon'  => 'network',
+						'title' => 'Working Style',
+						'items' => array( 'Communication', 'Teamwork', 'Problem-Solving', 'Attention to Detail' ),
+					),
+				),
+				'projects' => array(
+					array(
+						'title' => 'Academic Web Development Project',
+						'text'  => 'A class website built to be functional and easy to use, from layout through the written project notes.',
+						'role'  => 'Planning, Design, Coding, and Documentation',
+						'tech'  => array( 'HTML', 'CSS', 'JavaScript', 'PHP' ),
+					),
+					array(
+						'title' => 'Database Management Project',
+						'text'  => 'An academic system for storing and organizing information, with the process written down so others can follow it.',
+						'role'  => 'Database Design and Documentation',
+						'tech'  => array( 'MySQL' ),
+					),
+				),
+				'education' => array(
+					array(
+						'title' => 'Bachelor of Science in Information Technology',
+						'meta'  => 'Opol Community College · Fourth Year',
+						'text'  => 'Currently enrolled, with coursework in programming, databases, web development, and technical documentation.',
+					),
+					array(
+						'title' => 'Academic Experience',
+						'meta'  => 'Classwork, projects, and writing',
+						'text'  => 'Programming tasks, group projects, reports, and technical documents that turn class lessons into practice.',
+					),
+					array(
+						'title' => 'Training and Workshops',
+						'meta'  => 'Information Technology',
+						'text'  => 'Programming exercises, technical writing, seminars, and workshops on digital skills.',
 					),
 				),
 			),
 			array(
+				'slug'  => 'adrian',
 				'name'  => 'Adrian Lester Econar',
 				'role'  => 'System Analyst',
 				'bio'   => 'Analyzes project requirements and identifies solutions to improve the system. Helps ensure that the system meets user needs and project objectives.',

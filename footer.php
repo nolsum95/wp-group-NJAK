@@ -12,8 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 $gp_name    = (string) gp_content_get( 'group_name', get_bloginfo( 'name' ) );
 $gp_footer  = gp_content_get( 'footer', array() );
 $gp_footer  = is_array( $gp_footer ) ? $gp_footer : array();
-$gp_nav     = gp_content_get( 'nav', array() );
-$gp_nav     = is_array( $gp_nav ) ? $gp_nav : array();
+$gp_member_page = gp_current_member();
+$gp_nav         = is_array( $gp_member_page ) ? gp_member_nav( $gp_member_page ) : gp_content_get( 'nav', array() );
+$gp_nav         = is_array( $gp_nav ) ? $gp_nav : array();
 $gp_socials = gp_content_get( 'socials', array() );
 $gp_socials = is_array( $gp_socials ) ? $gp_socials : array();
 $gp_email   = (string) gp_content_get( 'email', '' );
@@ -70,11 +71,18 @@ $gp_note    = isset( $gp_footer['note'] ) ? (string) $gp_footer['note'] : 'Desig
 						<ul class="footer-links">
 							<?php foreach ( $gp_nav as $gp_item ) : ?>
 								<?php
-								if ( empty( $gp_item['label'] ) || empty( $gp_item['hash'] ) ) {
+								if ( empty( $gp_item['label'] ) ) {
+									continue;
+								}
+								if ( ! empty( $gp_item['url'] ) ) {
+									$gp_item_url = $gp_item['url'];
+								} elseif ( ! empty( $gp_item['hash'] ) ) {
+									$gp_item_url = gp_section_url( $gp_item['hash'] );
+								} else {
 									continue;
 								}
 								?>
-								<li><a href="<?php echo esc_url( gp_section_url( $gp_item['hash'] ) ); ?>"><?php echo esc_html( $gp_item['label'] ); ?></a></li>
+								<li><a href="<?php echo esc_url( $gp_item_url ); ?>"><?php echo esc_html( $gp_item['label'] ); ?></a></li>
 							<?php endforeach; ?>
 						</ul>
 					<?php endif; ?>
