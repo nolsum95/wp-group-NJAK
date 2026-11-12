@@ -120,23 +120,93 @@ function gp_content()
 
 		'members'          => array(
 			array(
-				'slug'  => 'nolly',
-				'name'  => 'Nolly S. Sumobay Jr.',
-				'role'  => 'Programmer',
-				'bio'   => 'Responsible for developing, coding, and maintaining the system. Focuses on creating functional features and ensuring the application works smoothly.',
-				'skills' => array('PHP', 'HTML', 'CSS', 'JavaScript'),
-				'photo' => 'nolly.jpg',
-				'tone'  => 'blue',
+				'slug'    => 'nolly',
+				'name'    => 'Nolly S. Sumobay Jr.',
+				'role'    => 'BSIT Student | Web Development',
+				'tagline' => 'Learning one step at a time.',
+				'bio'     => 'A fourth-year BSIT student at Opol Community College who is interested in web development and how websites are built. I learn by trying new tools, working on small projects, and practicing.',
+				'skills'  => array( 'HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress' ),
+				'photo'   => 'nolly-portrait.jpg',
+				'tone'    => 'blue',
+				'email'   => 'occ.sumobay.nollyjr@gmail.com',
+				'about'   => array(
+					array(
+						'label' => 'Background',
+						'text'  => 'A BSIT student at Opol Community College who is still exploring web development. I learn by practicing, trying code, and working with others on school projects.',
+					),
+					array(
+						'label' => 'Interests',
+						'text'  => 'Technology, building websites, exploring new tools, and time spent on personal interests.',
+					),
+					array(
+						'label' => 'Values',
+						'text'  => 'Patience, teamwork, responsibility, and a willingness to learn from mistakes.',
+					),
+					array(
+						'label' => 'Career Goal',
+						'text'  => 'To improve my web development skills and gain experience creating useful, user-friendly websites.',
+					),
+				),
+				'skill_groups' => array(
+					array(
+						'icon'  => 'code',
+						'title' => 'Programming Languages',
+						'items' => array( 'HTML', 'CSS', 'JavaScript', 'PHP (basic)' ),
+					),
+					array(
+						'icon'  => 'layout',
+						'title' => 'Web Development',
+						'items' => array( 'WordPress (basic)', 'Front-end Design', 'Website Development' ),
+					),
+					array(
+						'icon'  => 'cpu',
+						'title' => 'Tools',
+						'items' => array( 'Visual Studio Code', 'LocalWP', 'Git', 'GitHub' ),
+					),
+					array(
+						'icon'  => 'pen',
+						'title' => 'Working Style',
+						'items' => array( 'Teamwork', 'Communication', 'Problem-Solving', 'Time Management' ),
+					),
+				),
+				'projects' => array(
+					array(
+						'title' => 'Group Portfolio Website',
+						'text'  => 'A site that introduces the team and each member’s portfolio. I worked on the landing page, helped organize the member pages, and used Git and GitHub to share updates with the group.',
+						'role'  => 'Landing Page and Member Pages',
+						'tech'  => array( 'WordPress', 'PHP', 'CSS', 'JavaScript', 'LocalWP', 'GitHub' ),
+					),
+					array(
+						'title' => 'ALS Center Management System',
+						'text'  => 'A web-based system for ALS Center records, learner information, enrollment, and other administrative tasks.',
+					),
+					array(
+						'title' => 'Electric Billing System',
+						'text'  => 'A system for calculating electricity use, generating billing statements, and keeping customer payment records.',
+					),
+				),
+				'education' => array(
+					array(
+						'title' => 'Bachelor of Science in Information Technology',
+						'meta'  => 'Opol Community College · Fourth Year',
+						'text'  => 'Currently enrolled, and set to graduate next year.',
+					),
+					array(
+						'title' => 'Experience',
+						'meta'  => 'School and personal projects',
+						'text'  => 'No formal work experience yet. Most of my experience so far comes from school and personal projects.',
+					),
+				),
 				'links' => array(
+					array(
+						'label' => 'GitHub',
+						'icon'  => 'github',
+						'url'   => 'https://github.com/nolsum95',
+					),
 					array(
 						'label' => 'Facebook',
 						'icon'  => 'facebook',
 						'url'   => 'https://www.facebook.com/muslon.nssj',
-					),
-					array(
-						'label' => 'LinkedIn',
-						'icon'  => 'linkedin',
-						'url'   => 'https://www.linkedin.com/',
 					),
 				),
 			),
