@@ -141,23 +141,94 @@ function gp_content()
 				),
 			),
 			array(
-				'slug'  => 'japhet',
-				'name'  => 'Japhet Dasig',
-				'role'  => 'Project Manager',
-				'bio'   => 'Leads the team, organizes tasks, and monitors project progress. Ensures that everyone works together to complete the project on time.',
-				'skills' => array( 'Leadership', 'Planning', 'Teamwork', 'Time Management' ),
-				'photo' => 'japhet.jpg',
-				'tone'  => 'violet',
-				'links' => array(
+				'slug'    => 'japhet',
+				'name'    => 'Japhet Arañez Dasig',
+				'role'    => 'BSIT Student | Aspiring IT Professional',
+				'tagline' => 'Learning, Building, and Innovating Through Technology.',
+				'bio'     => 'I am a fourth-year BSIT student at Opol Community College with an interest in programming, web development, database management, and emerging technologies.',
+				'skills'  => array( 'PHP', 'JavaScript', 'HTML', 'CSS', 'Laravel', 'MySQL' ),
+				'photo'   => 'japhet.jpg',
+				'tone'    => 'violet',
+				'about'   => array(
 					array(
-						'label' => 'GitHub',
-						'icon'  => 'github',
-						'url'   => 'https://github.com/',
+						'label' => 'Background',
+						'text'  => 'An aspiring IT professional from Opol, Misamis Oriental, passionate about technology and software development.',
 					),
 					array(
-						'label' => 'LinkedIn',
-						'icon'  => 'linkedin',
-						'url'   => 'https://www.linkedin.com/',
+						'label' => 'Interests',
+						'text'  => 'Programming, web development, gaming, exploring new technologies, and learning about computer systems.',
+					),
+					array(
+						'label' => 'Values',
+						'text'  => 'Hard work, responsibility, teamwork, adaptability, and continuous learning.',
+					),
+					array(
+						'label' => 'Career Goal',
+						'text'  => 'To become a competent IT professional and software developer.',
+					),
+				),
+				'education' => array(
+					array(
+						'title' => 'Bachelor of Science in Information Technology',
+						'meta'  => 'Opol Community College',
+						'text'  => 'Fourth year.',
+					),
+				),
+				'skill_groups' => array(
+					array(
+						'icon'  => 'code',
+						'title' => 'Programming Languages',
+						'items' => array( 'PHP', 'JavaScript' ),
+					),
+					array(
+						'icon'  => 'layout',
+						'title' => 'Web Development',
+						'items' => array( 'HTML', 'CSS' ),
+					),
+					array(
+						'icon'  => 'tool',
+						'title' => 'Frameworks and Libraries',
+						'items' => array( 'Laravel', 'React Native (basic)' ),
+					),
+					array(
+						'icon'  => 'database',
+						'title' => 'Database',
+						'items' => array( 'MySQL' ),
+					),
+					array(
+						'icon'  => 'cpu',
+						'title' => 'Development Tools',
+						'items' => array( 'Visual Studio Code', 'Arduino IDE', 'Blynk' ),
+					),
+					array(
+						'icon'  => 'pen',
+						'title' => 'Soft Skills',
+						'items' => array( 'Problem-solving', 'Teamwork', 'Time Management', 'Adaptability' ),
+					),
+					array(
+						'icon'  => 'network',
+						'title' => 'Areas of Interest',
+						'items' => array( 'Cloud Computing', 'Web Development', 'Database Management', 'Internet of Things (IoT)' ),
+					),
+				),
+				'projects' => array(
+					array(
+						'title' => 'Web-Based ALS Center Management System',
+						'text'  => 'A web-based system designed to improve learner enrollment, profiling, grading, and reporting for ALS Opol West District.',
+						'role'  => 'Project Manager / Lead Presenter',
+						'tech'  => array( 'PHP', 'MySQL', 'HTML', 'CSS' ),
+					),
+					array(
+						'title' => 'Neighborhood Security and Emergency Warning System',
+						'text'  => 'An IoT-based project designed to support neighborhood security and emergency detection.',
+						'role'  => 'Student Developer / Project Member',
+						'tech'  => array( 'ESP32', 'Ultrasonic Sensor', 'Servo Motor' ),
+					),
+					array(
+						'title' => 'LED Blinking Activity Using Blynk',
+						'text'  => 'An IoT activity demonstrating remote LED control through the Blynk application.',
+						'role'  => 'Student Developer',
+						'tech'  => array( 'ESP32', 'Blynk', 'LED' ),
 					),
 				),
 			),
