@@ -1100,6 +1100,10 @@ textarea {
 	overflow-wrap: anywhere;
 }
 
+.contact-email + .contact-email {
+	margin-left: 1.25rem;
+}
+
 .contact-email:hover {
 	color: var(--blue-soft);
 }

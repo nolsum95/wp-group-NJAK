@@ -389,23 +389,94 @@ function gp_content()
 				),
 			),
 			array(
-				'slug'  => 'adrian',
-				'name'  => 'Adrian Lester Econar',
-				'role'  => 'System Analyst',
-				'bio'   => 'Analyzes project requirements and identifies solutions to improve the system. Helps ensure that the system meets user needs and project objectives.',
-				'skills' => array('System Analysis', 'Problem Solving', 'Research', 'Requirements Analysis'),
-				'photo' => 'adrian.jpg',
-				'tone'  => 'indigo',
-				'links' => array(
+				'slug'    => 'adrian',
+				'name'    => 'Adrian Lester Econar',
+				'role'    => 'BSIT Student | Aspiring System Analyst',
+				'tagline' => 'Willing to learn new technologies and take on new challenges.',
+				'bio'     => 'An Information Technology student at Opol Community College with an interest in system analysis, software development, and database management. I have basic knowledge of programming, web development, and information systems.',
+				'skills'  => array( 'System Analysis', 'Web Development', 'Database Management', 'Troubleshooting' ),
+				'photo'   => 'adrian.jpg',
+				'tone'    => 'indigo',
+				'email'   => 'adrianeconar12@gmail.com',
+				'phone'   => '0991 671 2469',
+				'about'   => array(
 					array(
-						'label' => 'GitHub',
-						'icon'  => 'github',
-						'url'   => 'https://github.com/',
+						'label' => 'Background',
+						'text'  => 'An Information Technology student at Opol Community College from Zone 8A, Igpit, Opol, Misamis Oriental. I am eager to learn and improve through practical experience.',
 					),
 					array(
-						'label' => 'LinkedIn',
-						'icon'  => 'linkedin',
-						'url'   => 'https://www.linkedin.com/',
+						'label' => 'Interests',
+						'text'  => 'Technology, software development, system analysis, and computer-related activities.',
+					),
+					array(
+						'label' => 'Values',
+						'text'  => 'Responsible, approachable, adaptable, and willing to learn new things.',
+					),
+					array(
+						'label' => 'Career Goal',
+						'text'  => 'To become a competent IT professional and gain experience developing and managing information systems.',
+					),
+				),
+				'skill_groups' => array(
+					array(
+						'icon'  => 'code',
+						'title' => 'Technical Skills',
+						'items' => array( 'Basic Programming', 'Software Development', 'Web Development' ),
+					),
+					array(
+						'icon'  => 'database',
+						'title' => 'Systems',
+						'items' => array( 'Database Management', 'System Analysis and Design' ),
+					),
+					array(
+						'icon'  => 'cpu',
+						'title' => 'Troubleshooting',
+						'items' => array( 'Computer Troubleshooting' ),
+					),
+					array(
+						'icon'  => 'pen',
+						'title' => 'Personal Skills',
+						'items' => array( 'Communication', 'Time Management', 'Teamwork', 'Problem-Solving' ),
+					),
+				),
+				'projects' => array(
+					array(
+						'title' => 'ALS Center Management System',
+						'text'  => 'A web-based system for ALS Center records, learner information, enrollment, and other administrative tasks.',
+						'role'  => 'Group Member',
+						'tech'  => array( 'PHP', 'Laravel', 'JavaScript' ),
+					),
+					array(
+						'title' => 'Electric Billing System',
+						'text'  => 'A system for calculating electricity use, generating billing statements, and keeping customer payment records.',
+						'role'  => 'Group Member',
+						'tech'  => array( 'PHP', 'MySQL', 'JavaScript' ),
+					),
+				),
+				'education' => array(
+					array(
+						'title' => 'Bachelor of Science in Information Technology',
+						'meta'  => 'Opol Community College',
+						'text'  => 'Currently enrolled.',
+					),
+					array(
+						'title' => 'Alternative Learning System (ALS)',
+						'meta'  => '2018–2019',
+					),
+					array(
+						'title' => 'Opol National Secondary Tech School',
+						'meta'  => '2015–2016',
+					),
+					array(
+						'title' => 'Opol Central School',
+						'meta'  => '2013–2014',
+					),
+				),
+				'achievements' => array(
+					array(
+						'title' => 'Electronic Products and Assessment Services NC II',
+						'meta'  => '2019',
+						'text'  => 'Training and certification.',
 					),
 				),
 			),

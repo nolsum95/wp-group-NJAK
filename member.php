@@ -26,6 +26,7 @@ $gp_projects     = isset( $gp_member['projects'] ) && is_array( $gp_member['proj
 $gp_education    = isset( $gp_member['education'] ) && is_array( $gp_member['education'] ) ? $gp_member['education'] : array();
 $gp_achievements = isset( $gp_member['achievements'] ) && is_array( $gp_member['achievements'] ) ? $gp_member['achievements'] : array();
 $gp_email        = ! empty( $gp_member['email'] ) ? (string) $gp_member['email'] : (string) gp_content_get( 'email', '' );
+$gp_phone        = ! empty( $gp_member['phone'] ) ? (string) $gp_member['phone'] : '';
 $gp_others       = gp_content_get( 'members', array() );
 $gp_others   = is_array( $gp_others ) ? $gp_others : array();
 $gp_current  = gp_member_slug( $gp_member );
@@ -303,6 +304,9 @@ get_header();
 			</div>
 			<?php if ( is_email( $gp_email ) ) : ?>
 				<a class="contact-email" href="<?php echo esc_url( 'mailto:' . $gp_email ); ?>"><?php echo esc_html( $gp_email ); ?></a>
+			<?php endif; ?>
+			<?php if ( '' !== $gp_phone ) : ?>
+				<a class="contact-email" href="<?php echo esc_url( 'tel:+63' . preg_replace( '/\D+/', '', ltrim( $gp_phone, '0' ) ) ); ?>"><?php echo esc_html( $gp_phone ); ?></a>
 			<?php endif; ?>
 			<?php if ( $gp_links ) : ?>
 				<ul class="member-socials">
