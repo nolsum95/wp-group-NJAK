@@ -801,6 +801,7 @@ textarea {
 
 .team-grid {
 	grid-template-columns: repeat(4, minmax(0, 1fr));
+	align-items: start;
 }
 
 .skills-grid {
@@ -833,6 +834,12 @@ textarea {
 	overflow: hidden;
 	border-radius: var(--radius);
 	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card {
+	align-self: start;
+	min-height: 0;
+	height: auto;
 }
 
 .member-card-link {
@@ -1028,10 +1035,46 @@ textarea {
 	line-height: 1.6;
 }
 
+.member-body {
+	gap: 0.2rem;
+}
+
+.member-body .role {
+	margin-top: 0.2rem;
+}
+
+.member-details {
+	display: grid;
+	grid-template-rows: 0fr;
+	margin-top: 0;
+	transition: grid-template-rows 0.45s ease, margin-top 0.45s ease;
+}
+
+.member-details-inner {
+	min-height: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	opacity: 0;
+	transition: opacity 0.35s ease;
+}
+
+.member-card:hover .member-details,
+.member-card:focus-within .member-details {
+	grid-template-rows: 1fr;
+	margin-top: 0.75rem;
+}
+
+.member-card:hover .member-details-inner,
+.member-card:focus-within .member-details-inner {
+	opacity: 1;
+}
+
 .member-links {
 	display: flex;
 	gap: 0.45rem;
-	margin: auto 0 0;
+	margin: 0;
 	padding: 0.2rem 0 0;
 	list-style: none;
 }
@@ -1350,18 +1393,6 @@ textarea {
 	0%,
 	100% { opacity: 0.55; }
 	50% { opacity: 1; }
-}
-
-.back-link {
-	margin-bottom: 1.75rem;
-}
-
-.back-link svg {
-	transform: rotate(180deg);
-}
-
-.back-link:hover svg {
-	transform: rotate(180deg) translateX(4px);
 }
 
 .member-hero-grid {

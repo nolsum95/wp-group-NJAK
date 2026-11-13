@@ -36,11 +36,6 @@ get_header();
 <main id="main">
 	<section class="section member-hero"<?php echo $gp_about ? '' : ' id="about"'; ?>>
 		<div class="container">
-			<a class="text-link back-link" href="<?php echo esc_url( gp_section_url( 'team' ) ); ?>">
-				<?php echo gp_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static theme icon. ?>
-				<?php esc_html_e( 'Back to the team', 'group-portfolio' ); ?>
-			</a>
-
 			<div class="member-hero-grid">
 				<div class="member-portrait tone-<?php echo esc_attr( $gp_tone ); ?><?php echo $gp_photo ? ' has-photo' : ''; ?>">
 					<div class="photo-art" aria-hidden="true">

@@ -61,34 +61,40 @@ $gp_members = is_array( $gp_members ) ? $gp_members : array();
 						<?php if ( ! empty( $gp_member['role'] ) ) : ?>
 							<p class="role"><?php echo esc_html( $gp_member['role'] ); ?></p>
 						<?php endif; ?>
-						<?php if ( ! empty( $gp_member['bio'] ) ) : ?>
-							<p class="bio"><?php echo esc_html( $gp_member['bio'] ); ?></p>
-						<?php endif; ?>
-						<?php if ( $gp_skills ) : ?>
-							<ul class="chips" aria-label="<?php esc_attr_e( 'Skills', 'group-portfolio' ); ?>">
-								<?php foreach ( $gp_skills as $gp_skill ) : ?>
-									<?php if ( '' === trim( (string) $gp_skill ) ) { continue; } ?>
-									<li><?php echo esc_html( $gp_skill ); ?></li>
-								<?php endforeach; ?>
-							</ul>
-						<?php endif; ?>
-						<?php if ( $gp_links ) : ?>
-							<ul class="member-links">
-								<?php foreach ( $gp_links as $gp_link ) : ?>
-									<?php
-									if ( empty( $gp_link['url'] ) || empty( $gp_link['label'] ) ) {
-										continue;
-									}
-									$gp_external = 0 === strpos( $gp_link['url'], 'http' );
-									?>
-									<li>
-										<a class="icon-btn" href="<?php echo esc_url( $gp_link['url'] ); ?>"<?php echo $gp_external ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>>
-											<?php echo gp_icon( isset( $gp_link['icon'] ) ? (string) $gp_link['icon'] : '' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static theme icon. ?>
-											<span class="sr-only"><?php echo esc_html( $gp_link['label'] ); ?></span>
-										</a>
-									</li>
-								<?php endforeach; ?>
-							</ul>
+						<?php if ( ! empty( $gp_member['bio'] ) || $gp_skills || $gp_links ) : ?>
+							<div class="member-details">
+								<div class="member-details-inner">
+									<?php if ( ! empty( $gp_member['bio'] ) ) : ?>
+										<p class="bio"><?php echo esc_html( $gp_member['bio'] ); ?></p>
+									<?php endif; ?>
+									<?php if ( $gp_skills ) : ?>
+										<ul class="chips" aria-label="<?php esc_attr_e( 'Skills', 'group-portfolio' ); ?>">
+											<?php foreach ( $gp_skills as $gp_skill ) : ?>
+												<?php if ( '' === trim( (string) $gp_skill ) ) { continue; } ?>
+												<li><?php echo esc_html( $gp_skill ); ?></li>
+											<?php endforeach; ?>
+										</ul>
+									<?php endif; ?>
+									<?php if ( $gp_links ) : ?>
+										<ul class="member-links">
+											<?php foreach ( $gp_links as $gp_link ) : ?>
+												<?php
+												if ( empty( $gp_link['url'] ) || empty( $gp_link['label'] ) ) {
+													continue;
+												}
+												$gp_external = 0 === strpos( $gp_link['url'], 'http' );
+												?>
+												<li>
+													<a class="icon-btn" href="<?php echo esc_url( $gp_link['url'] ); ?>"<?php echo $gp_external ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>>
+														<?php echo gp_icon( isset( $gp_link['icon'] ) ? (string) $gp_link['icon'] : '' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static theme icon. ?>
+														<span class="sr-only"><?php echo esc_html( $gp_link['label'] ); ?></span>
+													</a>
+												</li>
+											<?php endforeach; ?>
+										</ul>
+									<?php endif; ?>
+								</div>
+							</div>
 						<?php endif; ?>
 					</div>
 				</article>
